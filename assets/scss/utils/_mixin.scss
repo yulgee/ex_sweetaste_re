@@ -1,0 +1,53 @@
+// rwd
+@mixin rwd($px) {
+    @media (max-width: $px) {
+        @content;
+    }
+}
+
+// transition
+@mixin transition {
+    transition: all .3s ease;
+}
+
+
+//background cover
+@mixin bg-cover {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+// Hover
+@mixin hover {
+    &:hover {
+        @content;
+    }
+}
+
+@mixin hover-focus {
+
+    &:hover,
+    &:focus {
+        @content;
+    }
+}
+
+@mixin plain-hover-focus {
+
+    &,
+    &:hover,
+    &:focus {
+        @content;
+    }
+}
+
+@mixin hover-focus-active {
+
+    &:hover,
+    &:focus,
+    &:active {
+        @content;
+    }
+}
